@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ukachi Agnes Eze-Mbey, researcher at Carnegie Mellon University Africa working on AI in education, computing education research and African language AI.">
+<meta property="og:title" content="Ukachi Eze-Mbey">
+<meta property="og:description" content="Researcher in AI in education, computing education and African language AI at CMU-Africa.">
+<meta property="og:url" content="https://ukachiagnes.com">
+<link rel="canonical" href="https://ukachiagnes.com">
+<title>Ukachi Eze-Mbey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column with a left "margin note" rail for dates/labels; hero is a name + research question, not a banner */
+:root{
+  --bg:#f3f5f1; --surface:#e6ebe3; --ink:#15241d; --muted:#506157; --line:#c8d1c6;
+  --accent:#b8560f; --accent-soft:#f1dcc6;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#111a15; --surface:#1a261f; --ink:#e4ebe5; --line:#2c3b32;
+  --muted:#9aaba0; --accent:#f0954a; --accent-soft:#3a2716; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#111a15; --surface:#1a261f; --ink:#e4ebe5; --muted:#9aaba0; --line:#2c3b32;
+  --accent:#f0954a; --accent-soft:#3a2716; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.075rem;line-height:1.65;margin:0}
+.wrap{max-width:60rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--line)}
+.mark{font-family:var(--display);font-weight:800;letter-spacing:-.01em;font-size:1.1rem;text-decoration:none}
+nav ul{display:flex;gap:clamp(12px,3vw,28px);list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+
+header.hero{padding-block:clamp(48px,9vw,104px) clamp(40px,7vw,80px);display:grid;gap:28px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,5.4rem);line-height:.98;letter-spacing:-.035em;margin:0;text-wrap:balance}
+h1 .q{display:block;font-weight:400;font-size:.42em;letter-spacing:-.01em;line-height:1.2;margin-top:.6em;max-width:28ch;color:var(--muted)}
+h1 .q em{font-style:normal;color:var(--accent);font-weight:600}
+.lede{max-width:62ch;margin:0;font-size:1.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{font-family:var(--mono);font-size:.76rem;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{font-family:var(--display);font-weight:600;font-size:.95rem;text-decoration:none;padding:11px 20px;border-radius:6px;background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--accent);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+section{padding-block:clamp(44px,7vw,72px);border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:11rem 1fr;gap:24px;align-items:baseline;margin-bottom:28px}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-.02em;line-height:1.1;margin:0;text-wrap:balance}
+.label{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+
+.row{display:grid;grid-template-columns:11rem 1fr;gap:24px;padding-block:22px;border-top:1px dashed var(--line)}
+.row:first-of-type{border-top:0}
+.row > div{min-width:0}
+.when{font-family:var(--mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:4px}
+h3{font-family:var(--display);font-weight:600;font-size:1.22rem;letter-spacing:-.01em;line-height:1.25;margin:0 0 6px;text-wrap:balance}
+.row p{margin:0;max-width:64ch}
+.meta{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:8px !important}
+.badge{display:inline-block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-soft);color:var(--accent);padding:3px 8px;border-radius:4px;margin-bottom:8px;font-weight:500}
+
+.about{display:grid;grid-template-columns:11rem 1fr;gap:24px}
+.about p{margin:0 0 1em;max-width:64ch}
+.about p:last-child{margin-bottom:0}
+
+.contact{background:var(--surface);border-radius:10px;padding:clamp(24px,4vw,40px);display:grid;gap:18px}
+.contact p{margin:0;max-width:56ch}
+.email{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.email code{font-family:var(--mono);font-size:1rem;background:var(--bg);border:1px solid var(--line);padding:8px 12px;border-radius:6px;user-select:all;word-break:break-all}
+.email button{font-family:var(--mono);font-size:.78rem;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:9px 12px;cursor:pointer}
+.email button:hover{border-color:var(--accent);color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0;padding:0;list-style:none;font-family:var(--mono);font-size:.85rem}
+
+footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:680px){
+  .sec-head,.row,.about{grid-template-columns:1fr;gap:6px}
+  .when{padding-top:0}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn,a{transition:color .15s,background .15s,border-color .15s}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="#top">Ukachi Eze-Mbey</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <p class="eyebrow">Researcher · Carnegie Mellon University Africa · Kigali</p>
+    <h1>Ukachi Agnes Eze&#8209;Mbey
+      <span class="q">I study how people in Africa <em>learn with</em>, <em>build</em> and <em>live with</em> new technology.</span>
+    </h1>
+    <p class="lede">My work sits between computing education, human–computer interaction and language technology. I use qualitative and mixed methods to understand the people behind the systems: learners, EdTech professionals, dataset contributors and communities going through technological change.</p>
+    <ul class="chips" aria-label="Research areas">
+      <li>AI in education</li><li>Computing education research</li><li>UX research</li><li>African language AI</li><li>Socio-technical transitions</li>
+    </ul>
+    <div class="cta">
+      <a class="btn" href="#contact">Get in touch</a>
+      <a class="btn ghost" href="https://orcid.org/0009-0006-5879-6322" target="_blank" rel="noopener">ORCID profile</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="about">
+      <span class="label">About</span>
+      <div>
+        <p>I am completing an MSc at Carnegie Mellon University Africa in Kigali, Rwanda, where I work as a researcher and serve as a teaching assistant for 04-641, Fundamentals of Telecommunications and Computer Networks. I trained first as an engineer, with a BSc in Electronic and Electrical Engineering from Obafemi Awolowo University, Nigeria.</p>
+        <p>Before CMU-Africa I was a researcher at Data Science Nigeria, and I spent a summer at Aalto University in Finland as a research assistant through the ASCI research program. Outside research I run a small startup, lead a team of nine as Academic and Research Minister at CMU-Africa, and create content on <a href="https://www.youtube.com/@ukachiagnesbaby" target="_blank" rel="noopener">YouTube</a>.</p>
+        <p>I am preparing to begin a PhD in AI in education and computing education research, and I am interested in labs that study how learners and educators in under-represented regions adopt and shape AI tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="sec-head"><span class="label">Research</span><h2>Current projects</h2></div>
+
+    <div class="row">
+      <div class="when">2026</div>
+      <div>
+        <span class="badge">Accepted · WiML 2026 at NeurIPS</span>
+        <h3>Who Builds the Data? Nigerian language speech dataset creators</h3>
+        <p>A qualitative, contributor-centred survey study of how Nigerian language audio datasets are built, comparing independent contributors with institutionally funded ones.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Jan 2026 – now</div>
+      <div>
+        <h3>Cautious Innovators: how African EdTech professionals make sense of generative AI</h3>
+        <p>Reflexive thematic analysis of about 290 reflections written by EdTech professionals in seven African countries during a three-course GenAI upskilling series.</p>
+        <p class="meta">Reflexive thematic analysis · MAXQDA</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Sep 2026 – now</div>
+      <div>
+        <h3>Plugged In, Left Out? Winners, losers and navigators of Rwanda's e-mobility shift</h3>
+        <p>A mixed-methods study of the socio-technical challenges of Africa's e-mobility transition, using Rwanda as the case, and of how affected groups navigate them.</p>
+        <p class="meta">Mixed methods · Fieldwork Dec–Jan · Final report March 2027</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Fall 2026</div>
+      <div>
+        <h3>Offline multilingual spoken question answering for African languages</h3>
+        <p>MSIT practicum with Intron. Our team is building a multidomain spoken QA system for Yoruba, Nigerian Pidgin, Igbo, Kinyarwanda and Swahili, covering health, finance, telecoms, education and law. I am project manager and client liaison, and I build the domain classifiers for Nigerian Pidgin and Igbo text data.</p>
+        <p class="meta">Gemma · Multimodal (audio + text) · Team of four</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><span class="label">Experience</span><h2>Where I've worked</h2></div>
+
+    <div class="row">
+      <div class="when">Fall 2026</div>
+      <div>
+        <h3>Teaching Assistant, CMU-Africa</h3>
+        <p>04-641 Fundamentals of Telecommunications and Computer Networks.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Current</div>
+      <div>
+        <h3>Academic and Research Minister, CMU-Africa</h3>
+        <p>Lead a team of nine supporting academic and research life for students at Carnegie Mellon University Africa.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Jun – Sep 2026</div>
+      <div>
+        <h3>Research Assistant, Aalto University, Finland</h3>
+        <p>Summer research placement through the ASCI research program.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Jan – May 2026</div>
+      <div>
+        <h3>Learning Engineer Research Assistant, CMU-Africa</h3>
+        <p>Learning Science for Innovators (LSFI), a Mastercard-funded EdTech project. Applied HCI, learning science and UX research, including qualitative analysis of longitudinal student feedback on educational platforms.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">May 2024 – Jan 2025</div>
+      <div>
+        <h3>Researcher, Data Science Nigeria</h3>
+        <p>Research in Nigeria's AI and data science community.</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:48px;margin-bottom:12px"><span class="label">Education</span><h2>Degrees</h2></div>
+    <div class="row">
+      <div class="when">Dec 2026</div>
+      <div><h3>MSc, Carnegie Mellon University Africa</h3><p>Kigali, Rwanda.</p></div>
+    </div>
+    <div class="row">
+      <div class="when">BSc</div>
+      <div><h3>Electronic and Electrical Engineering, Obafemi Awolowo University</h3><p>Ile-Ife, Nigeria.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <span class="label">Contact</span>
+      <h2>Let's talk research</h2>
+      <p>I'm open to PhD and research assistant opportunities, collaborations in computing education and African language AI, and speaking invitations.</p>
+      <div class="email">
+        <code id="mail">ukachiezembey@gmail.com</code>
+        <button type="button" id="copy">Copy email</button>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/ukachi-eze-mbey" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Kachiengineers" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0006-5879-6322" target="_blank" rel="noopener">ORCID</a></li>
+        <li><a href="https://www.youtube.com/@ukachiagnesbaby" target="_blank" rel="noopener">YouTube</a></li>
+        <!-- CV: replace PASTE-CV-LINK-HERE with your CV link, then remove these comment markers
+        <li><a href="PASTE-CV-LINK-HERE" target="_blank" rel="noopener">CV</a></li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Ukachi Agnes Eze-Mbey</span>
+    <span>ukachiagnes.com · Kigali, Rwanda</span>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('mail').textContent;
+  function done(){ b.textContent='Copied'; setTimeout(function(){b.textContent='Copy email'},1800); }
+  function fallback(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Selected, press Ctrl+C'; }
+  try{ navigator.clipboard.writeText(t).then(done, fallback); }catch(e){ fallback(); }
+});
+</script>
+</body>
+</html>
