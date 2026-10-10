@@ -6,8 +6,9 @@
 <meta name="description" content="Ukachi Agnes Eze-Mbey, researcher at Carnegie Mellon University Africa working on AI in education, computing education research and African language AI.">
 <meta property="og:title" content="Ukachi Eze-Mbey">
 <meta property="og:description" content="Researcher in AI in education, computing education and African language AI at CMU-Africa.">
-<meta property="og:url" content="https://ukachiagnes.com">
-<link rel="canonical" href="https://ukachiagnes.com">
+<meta property="og:image" content="https://kachiengineers.github.io/ukachiagnes/images/portrait.jpg">
+<meta property="og:url" content="https://kachiengineers.github.io/ukachiagnes/">
+<link rel="canonical" href="https://kachiengineers.github.io/ukachiagnes/">
 <title>Ukachi Eze-Mbey</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +42,22 @@ nav ul{display:flex;gap:clamp(12px,3vw,28px);list-style:none;margin:0;padding:0;
 nav ul a{text-decoration:none;color:var(--muted)}
 nav ul a:hover{color:var(--ink)}
 
-header.hero{padding-block:clamp(48px,9vw,104px) clamp(40px,7vw,80px);display:grid;gap:28px}
+header.hero{padding-block:clamp(40px,7vw,88px) clamp(40px,7vw,80px);display:grid;grid-template-columns:minmax(0,1fr) clamp(200px,28vw,300px);gap:clamp(28px,5vw,56px);align-items:center}
+.hero-text{display:grid;gap:28px;min-width:0}
+.portrait{margin:0;position:relative;isolation:isolate}
+.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.portrait::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1.5px solid var(--accent);border-radius:6px;z-index:-1}
+@media (max-width:760px){header.hero{grid-template-columns:1fr}.portrait{max-width:240px;order:-1}}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.gallery figure{margin:0;display:grid;gap:8px;min-width:0}
+.gallery img{display:block;width:100%;height:100%;object-fit:cover;border-radius:4px;background:var(--surface)}
+.gallery figcaption{font-family:var(--mono);font-size:.74rem;color:var(--muted);line-height:1.4}
+.g-wide{grid-column:span 4}.g-tall{grid-column:span 2}.g-half{grid-column:span 3}
+.g-wide img{aspect-ratio:3/2}.g-tall img{aspect-ratio:3/4.4}.g-half img{aspect-ratio:4/3}
+.group-label{grid-column:1/-1;font-family:var(--display);font-weight:600;font-size:1.1rem;margin:12px 0 0}
+.group-label:first-child{margin-top:0}
+.group-label span{font-family:var(--mono);font-weight:400;font-size:.76rem;color:var(--muted);margin-left:8px}
+@media (max-width:680px){.gallery{grid-template-columns:1fr 1fr}.g-wide{grid-column:1/-1}.g-tall,.g-half{grid-column:span 1}.g-half img{aspect-ratio:3/4}}
 .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,5.4rem);line-height:.98;letter-spacing:-.035em;margin:0;text-wrap:balance}
 h1 .q{display:block;font-weight:400;font-size:.42em;letter-spacing:-.01em;line-height:1.2;margin-top:.6em;max-width:28ch;color:var(--muted)}
@@ -100,11 +116,13 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#moments">Moments</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header class="hero" id="top">
+   <div class="hero-text">
     <p class="eyebrow">Researcher · Carnegie Mellon University Africa · Kigali</p>
     <h1>Ukachi Agnes Eze&#8209;Mbey
       <span class="q">I study how people in Africa <em>learn with</em>, <em>build</em> and <em>live with</em> new technology.</span>
@@ -117,6 +135,8 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
       <a class="btn" href="#contact">Get in touch</a>
       <a class="btn ghost" href="https://orcid.org/0009-0006-5879-6322" target="_blank" rel="noopener">ORCID profile</a>
     </div>
+   </div>
+    <figure class="portrait"><img src="images/portrait.jpg" alt="Portrait of Ukachi Agnes Eze-Mbey" width="800" height="1000"></figure>
   </header>
 
   <section id="about">
@@ -139,6 +159,16 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
         <span class="badge">Accepted · WiML 2026 at NeurIPS</span>
         <h3>Who Builds the Data? Nigerian language speech dataset creators</h3>
         <p>A qualitative, contributor-centred survey study of how Nigerian language audio datasets are built, comparing independent contributors with institutionally funded ones.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Jun – Sep 2026</div>
+      <div>
+        <span class="badge">Poster · Aalto University</span>
+        <h3>Network support across life stages in academics</h3>
+        <p>How professional networks shape career progression for academics through parenthood and caregiving, career breaks, and the return to work. The study combines a 15-minute anonymous survey with 45-minute interviews, analysed with mixed methods.</p>
+        <p class="meta">With Deepika Yadav, Emma Schwentner, Kashish Jaswani and Barbara Keller · Aalto University School of Science</p>
       </div>
     </div>
 
@@ -191,7 +221,14 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
       <div class="when">Jun – Sep 2026</div>
       <div>
         <h3>Research Assistant, Aalto University, Finland</h3>
-        <p>Summer research placement through the ASCI research program.</p>
+        <p>Summer research placement through the ASCI research program. Presented a poster on network support across life stages in academics.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2026</div>
+      <div>
+        <h3>Participant, CMMRS 2026, Germany</h3>
+        <p>The Cornell, Maryland, Max Planck Pre-Doctoral Research School, hosted at the Max Planck Institute for Software Systems.</p>
       </div>
     </div>
     <div class="row">
@@ -220,6 +257,21 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
     </div>
   </section>
 
+  <section id="moments">
+    <div class="sec-head"><span class="label">Moments</span><h2>Research in the field</h2></div>
+    <div class="gallery">
+      <p class="group-label">Aalto University <span>Espoo, Finland · 2026</span></p>
+      <figure class="g-half"><img src="images/aalto-poster-presenting.jpg" alt="Ukachi standing beside her research poster at Aalto University" loading="lazy"><figcaption>Presenting my poster at Aalto</figcaption></figure>
+      <figure class="g-half"><img src="images/aalto-poster.jpg" alt="Poster titled Network Support Across Life Stages in Academics" loading="lazy"><figcaption>Network Support Across Life Stages in Academics</figcaption></figure>
+
+      <p class="group-label">CMMRS 2026 <span>Max Planck Institute for Software Systems, Germany</span></p>
+      <figure class="g-wide"><img src="images/cmmrs-group.jpg" alt="Five CMMRS 2026 participants in matching T-shirts" loading="lazy"><figcaption>With fellow CMMRS 2026 participants</figcaption></figure>
+      <figure class="g-tall"><img src="images/cmmrs-campus.jpg" alt="Ukachi on the Max Planck campus" loading="lazy"><figcaption>On the Max Planck campus</figcaption></figure>
+      <figure class="g-wide"><img src="images/cmmrs-lecture.jpg" alt="Ukachi in a lecture hall during a CMMRS session" loading="lazy"><figcaption>In a research school session</figcaption></figure>
+      <figure class="g-tall"><img src="images/cmmrs-sign.jpg" alt="Two participants beside the CMMRS 2026 sign" loading="lazy"><figcaption>Arriving at the research school</figcaption></figure>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="contact">
       <span class="label">Contact</span>
@@ -243,7 +295,7 @@ footer{padding-block:32px 48px;font-family:var(--mono);font-size:.75rem;color:va
 
   <footer>
     <span>© 2026 Ukachi Agnes Eze-Mbey</span>
-    <span>ukachiagnes.com · Kigali, Rwanda</span>
+    <span>Kigali, Rwanda</span>
   </footer>
 </div>
 
